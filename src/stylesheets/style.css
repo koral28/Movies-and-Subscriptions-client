@@ -1,0 +1,135 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    float: center;
+    width: 100px;
+  }
+  
+  a {
+    color: #00b7ff;
+  }
+  
+  .Users,
+  .Movies {
+    border: 3px solid black;
+    height: 500px;
+    width: 50%;
+    margin-top: 20px;
+    overflow-y: scroll;
+    margin-left: 300px;
+
+  }
+  
+  .image {
+    float: left;
+  }
+  
+  .btn {
+    font: bold 12px Arial;
+    text-decoration: none;
+    background-color: #eeeeee;
+    color: #333333;
+    padding: 2px 8px 2px 8px;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #cccccc;
+  }
+  
+  .allMovies {
+    border: 3px solid black;
+    width: 300px !important;
+    height: 200px;
+    margin-top: 9px;
+    text-align: left ;
+
+  }
+  .allUsers {
+    border: 3px solid black;
+    width: 350px;
+    height: fit-content;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  .deleteUserBtn {
+    margin-left: 50px;
+    margin-top: -25px;
+  }
+  
+  .editDelBtns {
+    text-align: left;
+  }
+  
+  button {
+    background-color: white;
+    border: 1px solid gray;
+    margin-top: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+  }
+  
+  .ulStyle {
+    list-style-type: disc;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  input {
+    margin-top: 5px;
+  }
+  
+  button:active {
+    background: yellow;
+  }
+  
+  /* .myBtn {
+    background: yellow;
+  } */
+  
+  .SubscriptionsWatched {
+    border: 3px solid black;
+    margin-left: 0px;
+    float: right !important;
+    width: 200px;
+    overflow-y: scroll;
+    text-align: left;
+    background-color: white; 
+
+   }
+
+  .allSubscriptions {
+    height: 200px;
+    margin-top: -20px;
+  }
+  
+  .emailCityBtns {
+    float: left;
+    margin-top: 20px;
+  }
+  
+  .subscription {
+    width: 300px;
+    border: 3px solid black;
+    margin-top: 30px;
+    float: left;
+    overflow-y: scroll;
+    text-align: left;
+  }
+  .userDataSubscribe {
+    margin-top: -10px;
+  }
+  .Subscriptions {
+    border: 3px solid black;
+    height: 500px;
+    width: 500px;
+    margin-top: 20px;
+  }
+  .saveAndCancelBtns {
+    margin-top: 10px;
+  }
+  

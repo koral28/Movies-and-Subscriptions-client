@@ -1,0 +1,142 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    float: left;
+    width: 1000px;
+  }
+  a {
+    color: #00b7ff;
+  }
+  .Users,
+  .Movies {
+    border: 3px solid black;
+    height: 500px;
+    width: 50%;
+    margin-top: 20px;
+    overflow-y: scroll;
+  }
+  .image {
+    float: left;
+  }
+  .btn {
+    font: bold 12px Arial;
+    text-decoration: none;
+    background-color: #eeeeee;
+    color: #333333;
+    padding: 2px 8px 2px 8px;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #cccccc;
+  }
+  .allMovies {
+    border: 3px solid black;
+    width: fit-content;
+    margin-top: 10px;
+  }
+  .allUsers {
+    border: 3px solid black;
+    width: 350px;
+    height: fit-content;
+    margin-top: 10px;
+  }
+  .deleteUserBtn {
+    margin-left: 50px;
+    margin-top: -25px;
+  }
+  
+  .editDelBtns {
+    text-align: left;
+  }
+  
+  button {
+    background-color: white;
+    border: 1px solid gray;
+    margin-top: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+  }
+  
+  .ulStyle {
+    list-style-type: disc;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px !important;
+  }
+  input {
+    margin-top: 5px;
+  }
+  
+  button:active {
+    background: yellow;
+  }
+  
+  .myBtn {
+    background: yellow;
+  }
+  
+  .SubscriptionsWatched {
+    margin-top: 10px ;
+    margin-left: 0px;
+    height: 200px ;
+    width: 230px !important;
+    margin-top: 1px ;
+    float: left;
+    overflow-y: scroll;
+  }
+  
+  .allSubscriptions {
+    height: 200px;
+    margin-top: -20px;
+  }
+  
+  .emailCityBtns {
+    float: left;
+    margin-top: 20px;
+  }
+  
+  .subscription {
+    height: 350px !important;
+    width: 300px;
+    border: 3px solid black;
+    margin-top: 20px;
+    float: left;
+  }
+  .userDataSubscribe {
+    margin-top: -10px;
+  }
+  .Subscriptions {
+    border: 3px solid black;
+    height: 700px;
+    width: 500px;
+    margin-top: 20px;
+    overflow-y: scroll;
+  }
+  .saveAndCancelBtns {
+    margin-top: 10px;
+  }
+  .addNewMovie {
+    border: 3px solid red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 23px;
+    width: 200px;
+  }
+  .date {
+    width: 65px;
+  }
+  .dropdown-content {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .selectMovies {
+    width: 130px;
+  }
+  
