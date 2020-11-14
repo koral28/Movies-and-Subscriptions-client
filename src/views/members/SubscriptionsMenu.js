@@ -34,7 +34,7 @@ const SubscriptionsMenu = (props)=>{
                 <Route path="/main/subscriptionsMenu/addSubscriptions" component={AddSubscriptions}/>
                 <Route path="/main/subscriptionsMenu/editSubscriptions/:member" render={(props) => <EditMembers memberName={props.match.params.member} members={members}/>} />
                 <Route path="/main/subscriptionsMenu/deleteSubscriptions/:member" render={(props) => <DeleteMembers memberName={props.match.params.member} members={members}/>} />
-                <Route path="/main/subscriptionsMenu/subscribeToNewMovie/:member" render={(props) => <SubscribeToNewMovie memberName={props.match.params.member} members={members}/>}/>
+                <Route path="/main/subscriptionsMenu/subscribeToNewMovie/:member" render={(props) => <SubscribeToNewMovie memberName={props.match.params.member} movies={movies} members={members}/>}/>
             </Switch>
             </ul>
         </div>

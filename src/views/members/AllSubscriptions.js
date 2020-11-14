@@ -5,8 +5,9 @@ import {useContext} from 'react';
 import {subscriptionsContext} from "./context";
 
 const AllSubscriptions = (props)=>{
-    const [arrayOfNotWatched,setArrayOfNotWatched] =useContext(subscriptionsContext);
-    const [arrayOfWatched,setArrayOfWatched] =useContext(subscriptionsContext);
+    const { notWatched, /*watched*/ } = useContext(subscriptionsContext);
+    const [/*arrayOfNotWatched*/,setArrayOfNotWatched] = notWatched;
+    // const [arrayOfWatched,setArrayOfWatched] = watched;
 
     const { register } = useForm();
 
@@ -17,19 +18,15 @@ const AllSubscriptions = (props)=>{
                   /*eslint-disable eqeqeq*/
               if (subscription.MemberId == memberId) {
                   if (movie._id == subscription.Movie.movieId) {
+                    // setArrayOfWatched(arrayOfWatched => [...arrayOfWatched, movie.Name]);
                     flag = true;
                   }
-                  else{
-                    setArrayOfWatched(arrayOfWatched => [...arrayOfWatched, movie.Name]);
-                }
               }
             });
             if (!flag) {
                 setArrayOfNotWatched(arrayOfNotWatched => [...arrayOfNotWatched, movie.Name]);
             }
           });
-
-          console.log(arrayOfWatched)
     }
     let allSubscriptions = props.members.map((member,index)=>{
         return  <li key={index} className="allSubscriptions">
@@ -42,13 +39,33 @@ const AllSubscriptions = (props)=>{
                                 Email: <input type="text" style={{border:"none"}} name="username" defaultValue={member.Email} ref={register}/><br/>
                                 City: <input type="text" style={{border:"none"}} name="password" defaultValue={member.City} ref={register}/><br/>
                                 <Link to={`/main/subscriptionsMenu/editSubscriptions/${member.Name}`}><button className="btn">Edit</button></Link>
-                                <Link to={`/main/subscriptionsMenu/deleteMovies/${member.Name}`}><button className="btn">Delete</button></Link>
+                                <Link to={`/main/subscriptionsMenu/deleteSubscriptions/${member.Name}`}><button className="btn">Delete</button></Link>
                             </form>
                             </div>
                         </div><br/>
                         <div className="SubscriptionsWatched" style={{ border: '3px solid rgba(1, 1, 1, 1)', marginTop:10, marginRight:47 }}>
                         <b>Movies Watched</b><br/><br/>
                         <Link to={`/main/subscriptionsMenu/subscribeToNewMovie/${member.Name}`}><button className="btn" type="button" onClick={()=>subscribe(member._id)}>Subscribe To New Movie</button></Link>
+                        
+                        {
+                            props.subscriptions.map((subscription,index) => {
+                                return <ul className="ulStyle" key={index}>
+                                    {
+                                        /*eslint-disable eqeqeq*/
+                                        props.movies.map((movie,index)=>{
+                                        if(subscription.Movie.movieId == movie._id && subscription.MemberId == member._id)
+                                        {
+                                            return <li key={index}>{movie.Name}</li>
+                                        }
+                                        else
+                                        {
+                                            return ""
+                                        }
+                                        })
+                                    }        
+                                </ul>
+                            })
+                        }
                         </div>
                    </div>
                 </li>
@@ -57,7 +74,6 @@ const AllSubscriptions = (props)=>{
         <div>
             <ul>
                 {allSubscriptions}
-               
             </ul>
            <ul>
            </ul>

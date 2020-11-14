@@ -7,7 +7,7 @@ export const SubscriptionsContextProvider = props=>{
     const [arrayOfWatched,setArrayOfWatched] =useState([]);
 
     return(
-        <subscriptionsContext.Provider value={[arrayOfNotWatched,setArrayOfNotWatched],[arrayOfWatched,setArrayOfWatched] }>
+        <subscriptionsContext.Provider value={{ notWatched: [arrayOfNotWatched,setArrayOfNotWatched], watched: [arrayOfWatched,setArrayOfWatched] }}>
             {props.children}
         </subscriptionsContext.Provider>
     )
